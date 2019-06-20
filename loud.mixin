@@ -1,8 +1,0 @@
-build:
-  v:
-    event-handlers:
-      - "console_direct+"
-test:
-  v:
-    event-handlers:
-      - "console_direct+"

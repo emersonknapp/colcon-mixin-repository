@@ -1,0 +1,28 @@
+build:
+  eclang:
+    build-base: clangbuild
+    install-base: clanginstall
+  armhf:
+    build-base: armhf-build
+    install-base: armhf-install
+    cmake-args:
+      - "-DCMAKE_CXX_FLAGS=-Wno-psabi"
+      - "-DCMAKE_C_FLAGS=-Wno-psabi"
+      - "-DDISABLE_SANITIZERS=ON"
+      - "-DINSTALL_EXAMPLES=OFF"
+      - "-DSECURITY=ON"
+      - "--no-warn-unused-cli"
+  v:
+    event-handlers:
+      - "console_direct+"
+
+test:
+  eclang:
+    build-base: clangbuild
+    install-base: clanginstall
+  armhf:
+    build-base: armhf-build
+    install-base: armhf-install
+  v:
+    event-handlers:
+      - "console_direct+"

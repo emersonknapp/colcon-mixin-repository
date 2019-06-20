@@ -1,9 +1,0 @@
-build:
-  eclang:
-    build-base: clangbuild
-    install-base: clanginstall
-test:
-  eclang:
-    build-base: clangbuild
-    install-base: clanginstall
-    

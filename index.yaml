@@ -7,5 +7,4 @@ mixin:
   - coverage.mixin
   - test-linters.mixin
   - tsan.mixin
-  - eclang.mixin
-  - loud.mixin
+  - emerson.mixin
