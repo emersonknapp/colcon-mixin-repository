@@ -12,6 +12,14 @@ build:
       - "-DINSTALL_EXAMPLES=OFF"
       - "-DSECURITY=ON"
       - "--no-warn-unused-cli"
+  emcc:
+    build-base: emcc-build
+    install-base: emcc-install
+    cmake-args:
+      - "-DBUILD_TESTING=OFF"
+      - "-DCMAKE_TOOLCHAIN_FILE=/root/emsdk/fastcomp/emscripten/cmake/Modules/Platform/Emscripten.cmake"
+    packages-ignore:
+      - osrf_testing_tools_cpp
   v:
     event-handlers:
       - "console_direct+"
@@ -23,6 +31,9 @@ test:
   armhf:
     build-base: armhf-build
     install-base: armhf-install
+  emcc:
+    build-base: emcc-build
+    install-base: emcc-install
   v:
     event-handlers:
       - "console_direct+"
